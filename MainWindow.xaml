@@ -1,0 +1,28 @@
+﻿<Window x:Class="NameManagerApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Name Manager" Height="354" Width="726">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Row 0, Column 0: Label -->
+        <Label Grid.Row="0" Grid.Column="0" Content="Name" FontWeight="Bold" Margin="5"/>
+
+        <!-- Row 1, Column 0: ListBox -->
+        <ListBox Grid.Row="1" Grid.Column="0" Name="_1stNames" Margin="5"/>
+
+        <!-- Row 1, Column 1: StackPanel with controls -->
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="5">
+            <TextBox Name="txtAdd" Margin="0,0,0,10" Height="25"/>
+            <Button Name="btnAdd" Content="Add Name" Click="btnAdd_Click" Margin="0,0,0,5" Height="30"/>
+            <Button Name="btnRemove" Content="Remove Selected" Click="btnRemove_Click" Height="30"/>
+        </StackPanel>
+    </Grid>
+</Window>
